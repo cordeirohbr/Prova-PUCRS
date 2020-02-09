@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/carousel/ -->
+<html lang="pt-Br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71822050-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71822050-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXX');</script>
+      <!-- End Google Tag Manager -->
+
+      <!-- Facebook Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '{your-pixel-id-goes-here}');
+        fbq('track', 'PageView');
+      </script>
+      <noscript>
+        <img height="1" width="1" style="display:none" 
+            src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"/>
+      </noscript>
+      <!-- End Facebook Pixel Code -->
+    <link rel="icon" href="http://www.pucrs.br/wp-content/themes/pucrs-responsivo/images/favicon.png">
+
+    <title>Prova PUCRS | Felipe Cordeiro - Processo Seletivo - Desenvolvedor Front-End</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/calendario/vanilla-calendar-min.css">
+
+   <!-- Font Awesome Solid-->
+   <link href="css/font/fontawesome.css" rel="stylesheet">
+   <link href="css/font/brands.css" rel="stylesheet">
+   <link href="css/font/solid.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+  
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <a class="navbar-brand" href="#"><img class="navbar-brand" src="img/logo-pucrs.png" width="96" height="50"></img></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse offset-md-1" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#filtros">Menu A<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu B
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#mapa">Submenu A</a>
+                <a class="dropdown-item" href="#interesses">Submenu B</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#interesses" tabindex="-1" aria-disabled="true">Menu C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#filtro" tabindex="-1" aria-disabled="true">Menu D</a>
+            </li>
+          </ul>
+
+          <div class="col-md-3 offset-md-1">
+            <div class="dropdown">
+              <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Make a Selection
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#parallax">Opção 1</a>
+                <a class="dropdown-item" href="#filtros">Opção 2</a>
+                <a class="dropdown-item" href="#gradiente">Opção 3</a>
+                <a class="dropdown-item" href="#mapa">Opção 4</a>
+              </div>
+          </div>
+          </div>
+          <div class="col-md-3"></div>
+          <form class="form-inline mt-2 mt-md-0 search-wrapper">
+            <div class="input-holder">
+                  <input type="text" class="search-input" placeholder="Pesquise aqui" />
+                  <button class="search-icon"  onclick="searchToggle(this, event);"><span></span></button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>             
+          </form>
+          </div>
+        </div>
+      </nav>
+    </header> 
+    
+  <section id="topo"></section>
+
+    <!-- SEÇÃO DO CARROUSEL -->
+    <main role="main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="img/banners/banner-1.png" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Lorem Ipsum</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-slider" href="#parallax" role="button">Mais Detalhes</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="img/banners/banner-2.png" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Lorem Ipsum</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-slider" href="#filtros" role="button">Mais Detalhes</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="img/banners/banner-3.png" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-slider" href="#gradiente" role="button">Mais Detalhes</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>      
+
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Step One</a></li>
+          <li class="breadcrumb-item"><a href="#">Step Two</a></li>
+          <li class="breadcrumb-item"><a href="#">Step Three</a></li>
+          <li class="breadcrumb-item"><a href="#">Step Four</a></li>
+          <li class="breadcrumb-item active" aria-current="page">BREADCRUMB</li>
+        </ol>
+      </nav>
+      <img class="responsive" src="img/banners/banner-container.jpg" alt="Imagem do Container">
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <hr class="featurette-divider-ed">
+          </div>
+        </div>
+      </div>  
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2 class="cor-titulo">Título da Seção</h2>
+          </div>
+        </div>
+      </div>
+
+      <section id="primeira-sessao">
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/secao/secao-1.jpg" alt="Generic placeholder image" width="240" height="240">
+            <h2>Lorem Ipsum</h2>
+            <p>Donec sed odio dui. <a href="http://www.pucrs.br/blog/estudo-analisa-como-os-torcedores-da-dupla-gre-nal-consomem-o-futebol-2/" >Etiam</a> porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/secao/secao-2.jpg" alt="Seção 2" width="240" height="240">
+            <h2 class="cor-titulo">Lorem Ipsum</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="http://www.pucrs.br/blog/5-dicas-saiba-como-se-alimentar-de-forma-saudavel-no-verao/">Morbi leo risus</a>, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/secao/secao-3.jpg" alt="Seção 3" width="240" height="240">
+            <h2 class="cor-titulo">Lorem Ipsum</h2>
+            <p>Donec sed odio dui. Etiam porta sem <a href="http://www.pucrs.br/blog/laboratorio-da-pucrs-avalia-influencia-de-calcado-infantil-na-caminhada/">malesuada</a> magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+          </div>
+        </div><!-- /.row -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO PARALLAX -->
+
+    <section id="parallax">
+      <div class="container-fluid">
+        <div class="parallax">
+          <div class="caption">
+            <h1>Parallax</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-slider" href="#parallax" role="button">Mais Detalhes</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="filtros">  
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ajust-fn-bot">
+          <button class="btn btn-default filter-button bot-verde-fraco" data-filter="fil-verde-fraco">Filtro 1</button>
+          <button class="btn btn-default filter-button bot-vermelho" data-filter="fil-vermelho">Filtro 2</button>
+          <button class="btn btn-default filter-button bot-laranja" data-filter="fil-laranja">Filtro 3</button>
+          <button class="btn btn-default filter-button bot-roxo" data-filter="fil-roxo">Filtro 4</button>
+          <button class="btn btn-default filter-button bot-verde-forte" data-filter="fil-verde-forte">Filtro 5</button>
+          <button class="btn btn-default filter-button bot-azul" data-filter="fil-azul">Filtro 6</button>
+          <button class="btn btn-default filter-button bot-amarelo" data-filter="fil-amarelo">Filtro 7</button>
+      </div>
+      <br/>
+      <div class="col-md-12 line">
+          <div class="filter fil-verde-fraco">
+              <div class="vertical bolas-geral bola-verde-fraco"></div>
+          </div>
+
+          <div class="filter fil-laranja">
+            <div class="vertical bolas-geral bola-laranja"></div>
+        </div>
+
+          <div class="filter fil-verde-forte">
+            <img class="vertical bolas-geral bola-verde-forte">
+          </div>
+          
+          <div class="filter fil-amarelo">
+            <img class="vertical bolas-geral bola-amarelo">
+          </div>
+
+          <div class="filter fil-roxo">
+            <img class="vertical bolas-geral bola-roxo">
+          </div>
+
+          <div class="filter fil-verde-fraco">
+            <img class="vertical bolas-geral bola-verde-fraco">
+          </div>
+
+          <div class="filter fil-amarelo">
+            <img class="vertical bolas-geral bola-amarelo">
+          </div>
+
+          <div class="filter fil-vermelho">
+            <img class="vertical bolas-geral bola-vermelha">
+          </div>
+      </div> 
+          <!--Segunda Coluna-->
+          <div class="col-md-12 line">
+            <div class="filter fil-vermelho">
+              <div class="vertical bolas-geral bola-vermelha"></div>
+          </div>
+
+          <div class="filter fil-amarelo">
+            <div class="vertical bolas-geral bola-amarelo"></div>
+        </div>
+
+          <div class="filter fil-azul">
+            <div class="vertical bolas-geral bola-azul"></div>
+          </div>
+          
+          <div class="filter fil-verde-fraco">
+            <div class="vertical bolas-geral bola-verde-fraco"></div>
+          </div>
+
+          <div class="filter fil-amarelo">
+            <div class="vertical bolas-geral bola-amarelo"></div>
+        </div>
+
+        <div class="filter fil-azul">
+          <div class="vertical bolas-geral bola-azul"></div>
+      </div>
+
+        <div class="filter fil-verde-fraco">
+          <div class="vertical bolas-geral bola-verde-fraco"></div>
+        </div>
+        
+        <div class="filter fil-amarelo">
+          <div class="vertical bolas-geral bola-amarelo"></div>
+        </div>
+     </div> 
+
+      <!--Terceira Coluna-->
+    <div class="col-md-12 line">
+      <div class="filter fil-amarelo">
+        <div class="vertical bolas-geral bola-amarelo"></div>
+      </div>
+
+      <div class="filter fil-roxo">
+            <div class="vertical bolas-geral bola-roxo"></div>
+        </div>
+
+          <div class="filter fil-amarelo">
+            <div class="vertical bolas-geral bola-amarelo"></div>
+          </div>
+          
+          <div class="filter fil-verde-vermelho">
+            <div class="vertical bolas-geral bola-vermelho"></div>
+          </div>
+
+          <div class="filter fil-azul">
+            <div class="vertical bolas-geral bola-azul"></div>
+        </div>
+
+        <div class="filter fil-amarelo">
+          <div class="vertical bolas-geral bola-amarelo"></div>
+      </div>
+
+        <div class="filter fil-verde-fraco">
+          <div class="vertical bolas-geral bola-verde-fraco"></div>
+        </div>
+        
+        <div class="filter fil-amarelo">
+          <div class="vertical bolas-geral bola-amarelo"></div>
+        </div>
+    </div> 
+        <!--Quarta Coluna-->
+        <div class="col-md-12 line">
+        <div class="filter fil-roxo">
+          <div class="vertical bolas-geral bola-roxo"></div>
+      </div>
+
+      <div class="filter fil-amarelo">
+        <div class="vertical bolas-geral bola-amarelo"></div>
+      </div>
+  
+      <div class="filter fil-vermelho">
+         <div class="vertical bolas-geral bola-vermelho"></div>
+      </div>
+            
+      <div class="filter fil-verde-vermelho">
+          <div class="vertical bolas-geral bola-amarelo"></div>
+      </div>
+    
+      <div class="filter fil-amarelo">
+        <div class="vertical bolas-geral bola-amarelo"></div>
+      </div>
+  
+      <div class="filter fil-verde-fraco">
+        <div class="vertical bolas-geral bola-verde-fraco"></div>
+      </div>
+  
+     <div class="filter fil-verde-roxo">
+        <div class="vertical bolas-geral bola-roxo"></div>
+      </div>
+          
+          <div class="filter fil-azul">
+            <div class="vertical bolas-geral bola-azul"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Gradiente -->
+  <section id="gradiente">
+    <div class="container-fluid">
+      <div id="grad3">
+        <div class="cap-parallax">
+          <h1>Gradiente</h1>
+        </div>
+      </div>
+  </section>
+
+ <!--Google map-->
+  <section id="mapa">
+      <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 300px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13812.870269095794!2d-51.1730033!3d-30.0592975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e20a65cc662a5c2!2sPontif%C3%ADcia%20Universidade%20Cat%C3%B3lica%20do%20Rio%20Grande%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1581134861241!5m2!1spt-BR!2sbr" 
+        width="600" height="450" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </section>
+
+   <!--MENU LATERAL-->
+<section id="interesses">    
+      <div class="container">
+        <div class="row">
+          <div class="col-3 back-azul-fraco ajust-fine">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <img class="espaco-pucrs" src="img/logo-pucrs.png" alt="Logo PUCRS" width="170">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Perfil</a>
+              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mensagens</a>
+            </div>
+          </div>
+          <div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <!-- Menu Dropdown 1 -->
+                <div class="row"> <!-- Titulo da Sessao -->
+                  <div class="col-md-7">
+                    <h2 class="cor-titulo fl">Título da 1ª Seção</h2>
+                  </div>  
+                    <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5">
+                      <div class="linha"></div>
+                    </div>
+                  </div>
+                <div class="col-md-12 back-azul"> <!--Titulo e botoes-->
+                  <h4 class="titulo-sec">Título do Menu</h4>
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#botao-1" 
+                      role="tab" aria-controls="pills-home" aria-selected="true">Botão 1</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#botao-2" 
+                      role="tab" aria-controls="pills-profile" aria-selected="false">Botão 2</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-3" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 3</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-4" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 4</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-5" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 5</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-6" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 6</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="botao-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                    <div class="tab-pane fade" id="botao-3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-4" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p> 
+                    </div>
+                    <div class="tab-pane fade" id="botao-5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-6" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p> 
+                    </div>
+                  </div>
+                  <div class="row"> <!--Tabela e Slider-->
+                    <div class="col-md-6">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Primeiro</th>
+                            <th scope="col">Último</th>
+                            <th scope="col">Nickname</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                    <div class="col-md-6">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner tamanho-alterado">
+                          <div class="carousel-item active">
+                            <img class="first-slide" src="img/banners/banner-1.png" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="second-slide" src="img/banners/banner-2.png" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="third-slide" src="img/banners/banner-3.png" alt="Third slide">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row"> <!--Calendário e a Lista-->
+                    <div class="col-md-6">
+                      <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6 lista-1">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                        <div class="col-md-6 lista-2">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <!-- Menu Dropdown 2 -->
+                <div class="row"> <!-- Titulo da Sessao -->
+                  <div class="col-md-7">
+                    <h2 class="cor-titulo fl">Título da 2ª Sessão</h2>
+                  </div>  
+                    <div class="col-md-5">
+                      <div class="linha"></div>
+                    </div>
+                  </div>
+                <div class="col-md-12 back-azul"> <!--Titulo e botoes-->
+                  <h4 class="titulo-sec">Título do Menu</h4>
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#botao-7" 
+                      role="tab" aria-controls="pills-home" aria-selected="true">Botão 1</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#botao-8" 
+                      role="tab" aria-controls="pills-profile" aria-selected="false">Botão 2</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-9" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 3</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-10" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 4</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-11" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 5</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-12" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 6</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="botao-7" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p> 
+                    </div>
+                    <div class="tab-pane fade" id="botao-8" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                    <div class="tab-pane fade" id="botao-9" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-10" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                    <div class="tab-pane fade" id="botao-11" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-12" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                  </div>
+                  <div class="row"> <!--Tabela e Slider-->
+                    <div class="col-md-6">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Primeiro</th>
+                            <th scope="col">Último</th>
+                            <th scope="col">Nickname</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                    <div class="col-md-6">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner tamanho-alterado">
+                          <div class="carousel-item active">
+                            <img class="first-slide" src="img/banners/banner-1.png" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="second-slide" src="img/banners/banner-2.png" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="third-slide" src="img/banners/banner-3.png" alt="Third slide">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row"> <!--Calendário e a Lista-->
+                    <div class="col-md-6">
+                      <div id="myCalendar2" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                        <div class="col-md-6">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> <!-- Menu Dropdown 3 -->
+                <div class="row"> <!-- Titulo da Sessao -->
+                  <div class="col-md-7">
+                    <h2 class="cor-titulo fl">Título da 3ª Seção</h2>
+                  </div>  
+                    <div class="col-md-5">
+                      <div class="linha"></div>
+                    </div>
+                  </div>
+                <div class="col-md-12 back-azul"> <!--Titulo e botoes-->
+                  <h4 class="titulo-sec">Título do Menu</h4>
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#botao-13" 
+                      role="tab" aria-controls="pills-home" aria-selected="true">Botão 1</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#botao-14" 
+                      role="tab" aria-controls="pills-profile" aria-selected="false">Botão 2</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-15" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 3</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-16" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 4</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-17" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 5</a>
+                    </li>
+                    <li class="nav-item botao-menu botao-geral">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#botao-18" 
+                      role="tab" aria-controls="pills-contact" aria-selected="false">Botão 6</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="botao-13" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p> 
+                    </div>
+                    <div class="tab-pane fade" id="botao-14" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-15" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-16" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Suspendisse potent</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                    <div class="tab-pane fade" id="botao-17" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Donec posuere</h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>
+                    </div>
+                    <div class="tab-pane fade" id="botao-18" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h5 class="card-title">Pellentesque </h5>
+                      <p class="card-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus tortor, 
+                        vestibulum ut aliquet ac, efficitur eu erat.</b></p>  
+                        
+                        <p class="card-text"><i>Aenean sollicitudin semper nisl in semper. 
+                        Phasellus lorem quam, bibendum eget rutrum at, accumsan sit amet sem. Nunc vestibulum 
+                        libero ac pharetra viverra. Donec ligula odio.</i> </p>
+                        
+                        <p class="card-text"><sup>Ggravida vel viverra a, laoreet eget tellus.</sup>
+                         Nam arcu dui, sodales vitae pellentesque in, mattis sed metus. <sub>Nunc turpis erat, eleifend
+                          eu dignissim ac,</sub> venenatis et augue.</p>  
+                    </div>
+                  </div>
+                  <div class="row"> <!--Tabela e Slider-->
+                    <div class="col-md-6">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Primeiro</th>
+                            <th scope="col">Último</th>
+                            <th scope="col">Nickname</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                    <div class="col-md-6">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner tamanho-alterado">
+                          <div class="carousel-item active">
+                            <img class="first-slide" src="img/banners/banner-1.png" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="second-slide" src="img/banners/banner-2.png" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="third-slide" src="img/banners/banner-3.png" alt="Third slide">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row"> <!--Calendário e a Lista-->
+                    <div class="col-md-6">
+                      <div id="myCalendar3" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                        <div class="col-md-6">
+                          <ol>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                            <li>Milk</li>
+                          </ol> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+</section>      
+
+<div class="divide50"></div>
+
+    <section id="caal_to_action_area">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-12 center">
+                    <div class="call_to_action_text wow slideInLeft btn-footer" data-wow-duration="2s">
+                      <button type="button" class="btn btn-light">Botão 1</button>
+                      <button type="button" class="btn btn-light">Botão 2</button>
+                      <button type="button" class="btn btn-light">Botão 3</button>
+                      <button type="button" class="btn btn-light">Botão 4</button>
+                      <button type="button" class="btn btn-light">Botão 5</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end call to action area -->
+    <a id="subirTopo">
+      ^ <br> subir
+    </a>
+    <footer id="footer_area">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="list-group .btn-footer">
+                  <button type="button" class="btn list-group-item list-group-item-action">Botão 1</button>
+                  <button type="button" class="btn list-group-item list-group-item-action">Botão 2</button>
+                  <button type="button" class="btn list-group-item list-group-item-action">Botão 3</button>
+                  <button type="button" class="btn list-group-item list-group-item-action">Botão 4</button>
+                </div>
+              </div>
+                <div class="col-sm-2">
+                  <div class="single-footer">
+                    <div class="footer-links menu-1">
+                        <ul class="list-unstyled">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="single-footer">
+                    <div class="footer-links menu-2">
+                        <ul class="list-unstyled">
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Search</a></li>
+                            <li><a href="">T & Cs</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Community</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="single-footer">
+                    <div class="footer-links menu-3">
+                        <ul class="list-unstyled">
+                            <li><a href="">Link 1</a></li>
+                            <li><a href="">Link 2</a></li>
+                            <li><a href="">Link 3</a></li>
+                            <li><a href="">Link 4</a></li>
+                            <li><a href="">Link 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-3">
+                  <h4 class="h6">Assine nossa newsletter</h4>
+                  <form>
+                    <div class="input-group">
+                      <input type="text" placeholder="Informe seu e-mail" class="form-control">
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-altered"><i class="fas fa-paper-plane"></i></button>
+                      </div>
+                    </div>
+                  </form>
+                    <div class="input-group">
+                      <ul class="social list-inline">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/pucrs/?hl=pt-br" class="externalinstagram"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fpucrs%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" class="external facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"></li><a href="https://twitter.com/PUCRS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="external twitter" data-text="Teste" data-count="horizontal" data-via="aqui-seu-nome-de-usuario-do-twitter" data-lang="pt"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCC_fcTG4eMb0pZBEi9LuNVA" class="external youtube"><i class="fab fa-youtube"></i></a></li>
+                      </ul>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copy">
+      <p>Desenvolvido por Felipe da Silva Cordeiro</p>
+    </div>
+
+    <script>
+        function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
+    </script>
+    <!--Script Compartilhamento Facebook-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0">
+    </script>
+
+    <!--Script Compartilhamento Twitter-->
+   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+    <!--Script do Efeito Scroll-->
+    <script>
+      $(document).ready(function(){
+    $("a").on('click', function(event) {
+  
+      if (this.hash !== "") {
+        event.preventDefault();
+  
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+  
+          window.location.hash = hash;
+        });
+      } 
+    });
+  });
+    </script>
+
+    <!-- Scrips -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--Script do Botão Subir ao Topo-->
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+      
+      jQuery("#subirTopo").hide();
+      
+      jQuery('a#subirTopo').click(function () {
+               jQuery('body,html').animate({
+                 scrollTop: 0
+               }, 800);
+              return false;
+         });
+      
+      jQuery(window).scroll(function () {
+               if (jQuery(this).scrollTop() > 1000) {
+                  jQuery('#subirTopo').fadeIn();
+               } else {
+                  jQuery('#subirTopo').fadeOut();
+               }
+           });
+      });
+      </script>
+
+
+    <script src="js/animacoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/calendario/vanilla-calendar-min.js"></script>
+
+
+      <!--Script do Calendário-->
+    <script>
+      let pastDates = true, availableDates = false, availableWeekDays = false
+      
+      let calendar = new VanillaCalendar({
+          selector: "#myCalendar",
+          months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+          shortWeekday: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+          onSelect: (data, elem) => {
+              console.log(data, elem)
+          }
+      })
+      
+      let btnPastDates = document.querySelector('[name=pastDates]')
+      btnPastDates.addEventListener('click', () => {
+          pastDates = !pastDates
+          calendar.set({pastDates: pastDates})
+          btnPastDates.innerText = `${(pastDates ? 'Disable' : 'Enable')} past dates`
+      })
+      
+      let btnAvailableDates = document.querySelector('[name=availableDates]')
+      btnAvailableDates.addEventListener('click', () => {
+          availableDates = !availableDates
+          btnAvailableDates.innerText = `${(availableDates ? 'Clear available dates' : 'Set available dates')}`
+          if (!availableDates) {
+              calendar.set({availableDates: [], datesFilter: false})
+              return
+          }
+          let dates = () => {
+              let result = []
+              for (let i = 1; i < 15; ++i) {
+                  if (i % 2) continue
+                  let date = new Date(new Date().getTime() + (60 * 60 * 24 * 1000) * i)
+                  result.push({date: `${String(date.getFullYear())}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`})
+              }
+              return result
+          }
+          calendar.set({availableDates: dates(), availableWeekDays: [], datesFilter: true})
+      })
+      
+      let btnAvailableWeekDays = document.querySelector('[name=availableWeekDays]')
+      btnAvailableWeekDays.addEventListener('click', () => {
+          availableWeekDays = !availableWeekDays
+          btnAvailableWeekDays.innerText = `${(availableWeekDays ? 'Clear available weekdays' : 'Set available weekdays')}`
+          if (!availableWeekDays) {
+              calendar.set({availableWeekDays: [], datesFilter: false})
+              return
+          }
+          let days = [{
+              day: 'monday'
+          }, {
+              day: 'tuesday'
+          }, {
+              day: 'wednesday'
+          }, {
+              day: 'friday'
+          }]
+          calendar.set({availableWeekDays: days, availableDates: [], datesFilter: true})
+      })
+  </script>
+  
+     <!-- Font Awesome -->
+    <script defer src="js/font/brands.js"></script>
+    <script defer src="js/font/solid.js"></script>
+    <script defer src="js/font/fontawesome.js"></script>
+
+    </body>
+  </html>
+
+
+  
